@@ -1,0 +1,22 @@
+version: 2
+updates:
+- package-ecosystem: cargo
+  directory: "/"
+  schedule:
+    interval: daily
+    time: "04:00"
+  open-pull-requests-limit: 10
+  target-branch: master
+  reviewers:
+  - Aedius
+  ignore:
+  - dependency-name: lexical-core
+    versions:
+    - 0.7.4
+    - 0.7.5
+  - dependency-name: unicode-normalization
+    versions:
+    - 0.1.16
+  - dependency-name: ructe
+    versions:
+    - 0.13.0
